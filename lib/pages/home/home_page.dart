@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double _screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: Colors.purple[800],
@@ -33,7 +32,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
           ),
-          AppModules(top: _screenHeight * .20),
+          AppModules(isMenuOpen: _showMenu),
         ],
       ),
     );

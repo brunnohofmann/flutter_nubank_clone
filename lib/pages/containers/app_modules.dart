@@ -4,8 +4,9 @@ import 'package:nubank_clone/pages/widgets/module_card.dart';
 
 class AppModules extends StatefulWidget {
   final double top;
+  final bool isMenuOpen;
 
-  const AppModules({Key key, this.top}) : super(key: key);
+  const AppModules({Key key, this.top, this.isMenuOpen = false}) : super(key: key);
 
   @override
   _AppModulesState createState() => _AppModulesState();
@@ -25,8 +26,10 @@ class _AppModulesState extends State<AppModules> {
     double _screenHeight = MediaQuery.of(context).size.height;
 
     return Stack(alignment: Alignment.topCenter, children: [
-      Positioned(
-        top: widget.top,
+      AnimatedPositioned(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+        top: _screenHeight * (widget.isMenuOpen ? .40 : .20),
         height: _screenHeight * .60,
         left: 0,
         right: 0,
@@ -44,8 +47,10 @@ class _AppModulesState extends State<AppModules> {
           ],
         ),
       ),
-      Positioned(
-        top: _screenHeight * .80,
+      AnimatedPositioned(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+        top: _screenHeight * (widget.isMenuOpen ? .99 : .80),
         child: Row(
           children: [
             Dot(isActive: _currentIndex == 0),
