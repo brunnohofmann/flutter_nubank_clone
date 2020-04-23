@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/pages/containers/app_modules.dart';
+import 'package:nubank_clone/pages/widgets/menu.dart';
 import 'package:nubank_clone/pages/widgets/my_app_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +33,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
           ),
+          Menu(isVibible: _showMenu,),
           AppModules(isMenuOpen: _showMenu),
         ],
       ),

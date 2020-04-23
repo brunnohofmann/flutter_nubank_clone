@@ -13,6 +13,10 @@ class AppModules extends StatefulWidget {
 }
 
 class _AppModulesState extends State<AppModules> {
+  static int SCREEN1 = 0;
+  static int SCREEN2 = 1;
+  static int SCREEN3 = 2;
+
   int _currentIndex;
 
   @override
@@ -29,7 +33,7 @@ class _AppModulesState extends State<AppModules> {
       AnimatedPositioned(
         duration: Duration(milliseconds: 300),
         curve: Curves.easeOut,
-        top: _screenHeight * (widget.isMenuOpen ? .40 : .20),
+        top: _screenHeight * (widget.isMenuOpen ? .80 : .20),
         height: _screenHeight * .60,
         left: 0,
         right: 0,
@@ -39,7 +43,7 @@ class _AppModulesState extends State<AppModules> {
               _currentIndex = index;
             });
           },
-          physics: BouncingScrollPhysics(),
+          physics: widget.isMenuOpen ? NeverScrollableScrollPhysics() : BouncingScrollPhysics(),
           children: [
             ModuleCard(),
             ModuleCard(),
@@ -53,9 +57,9 @@ class _AppModulesState extends State<AppModules> {
         top: _screenHeight * (widget.isMenuOpen ? .99 : .80),
         child: Row(
           children: [
-            Dot(isActive: _currentIndex == 0),
-            Dot(isActive: _currentIndex == 1),
-            Dot(isActive: _currentIndex == 2),
+            Dot(isActive: _currentIndex == SCREEN1),
+            Dot(isActive: _currentIndex == SCREEN2),
+            Dot(isActive: _currentIndex == SCREEN3),
           ],
         ),
       )
