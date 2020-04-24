@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/pages/widgets/buttons/menu_item.dart';
-import 'package:nubank_clone/pages/widgets/buttons/outlined_button.dart';
+
+import 'bottom_menu/buttons/menu_item.dart';
+import 'bottom_menu/buttons/outlined_button.dart';
 
 class Menu extends StatelessWidget {
   final bool isVibible;

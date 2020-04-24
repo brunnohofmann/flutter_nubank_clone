@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/pages/containers/app_modules.dart';
+import 'package:nubank_clone/pages/widgets/bottom_menu.dart';
 import 'package:nubank_clone/pages/widgets/menu.dart';
 import 'package:nubank_clone/pages/widgets/my_app_bar.dart';
 
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.purple[800],
+      backgroundColor: Colors.purple[600],
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Menu(isVibible: _showMenu,),
           AppModules(isMenuOpen: _showMenu),
+          BottomMenu(isVisible: !_showMenu)
         ],
       ),
     );
