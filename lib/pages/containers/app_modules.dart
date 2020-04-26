@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/pages/containers/CreditAccountResume.dart';
 import 'package:nubank_clone/pages/widgets/dot.dart';
 import 'package:nubank_clone/pages/widgets/module_card.dart';
 
@@ -33,8 +34,8 @@ class _AppModulesState extends State<AppModules> {
       AnimatedPositioned(
         duration: Duration(milliseconds: 300),
         curve: Curves.easeOut,
-        top: _screenHeight * (widget.isMenuOpen ? .80 : .20),
-        height: _screenHeight * .60,
+        top: _screenHeight * (widget.isMenuOpen ? .80 : .25),
+        height: _screenHeight * .45,
         left: 0,
         right: 0,
         child: PageView(
@@ -45,7 +46,7 @@ class _AppModulesState extends State<AppModules> {
           },
           physics: widget.isMenuOpen ? NeverScrollableScrollPhysics() : BouncingScrollPhysics(),
           children: [
-            ModuleCard(),
+            ModuleCard(child: CreditAccountResume(),),
             ModuleCard(),
             ModuleCard(),
           ],

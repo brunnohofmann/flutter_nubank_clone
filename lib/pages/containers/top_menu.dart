@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'bottom_menu/buttons/menu_item.dart';
-import 'bottom_menu/buttons/outlined_button.dart';
+import '../widgets/bottom_menu/buttons/menu_item.dart';
+import '../widgets/bottom_menu/buttons/outlined_button.dart';
 
 class Menu extends StatelessWidget {
   final bool isVibible;
@@ -55,7 +55,7 @@ class Menu extends StatelessWidget {
                 icon: Icons.phone_android,
                 text: 'Configurações do app',
               ),
-              Container(margin: EdgeInsets.only(top: 10), child: OutlinedButton(text: 'Sair',))
+              Container(margin: EdgeInsets.only(top: 10), child: OutlinedButton(text: 'SAIR DA CONTA',))
             ],
           ),
         )

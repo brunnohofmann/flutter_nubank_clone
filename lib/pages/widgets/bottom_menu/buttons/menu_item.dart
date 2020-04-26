@@ -9,14 +9,14 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 35,
+      height: 40,
       decoration: BoxDecoration(
           border: Border(
         bottom: BorderSide(width: 0.7, color: Colors.white54),
         top: BorderSide(width: 0.7, color: Colors.white54),
       )),
       child: RaisedButton(
-        color: Colors.purple[800],
+        color: Colors.purple[600],
         highlightColor: Colors.transparent,
         elevation: 0,
         disabledElevation: 0,

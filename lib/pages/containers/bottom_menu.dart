@@ -10,10 +10,11 @@ class BottomMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return AnimatedPositioned(
       left: 0,
       right: 0,
-      bottom: MediaQuery.of(context).padding.bottom,
+      duration: Duration(milliseconds: 200),
+      bottom: isVisible ? MediaQuery.of(context).padding.bottom : 0,
       height: 120,
       child: AnimatedOpacity(
         opacity: isVisible ? 1 : 0,

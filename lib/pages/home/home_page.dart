@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/pages/containers/app_modules.dart';
-import 'package:nubank_clone/pages/widgets/bottom_menu.dart';
-import 'package:nubank_clone/pages/widgets/menu.dart';
-import 'package:nubank_clone/pages/widgets/my_app_bar.dart';
+import 'package:nubank_clone/pages/containers/bottom_menu.dart';
+import 'package:nubank_clone/pages/containers/top_menu.dart';
+import 'package:nubank_clone/pages/widgets/app_bar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           Menu(isVibible: _showMenu,),
+          BottomMenu(isVisible: !_showMenu),
           AppModules(isMenuOpen: _showMenu),
-          BottomMenu(isVisible: !_showMenu)
         ],
       ),
     );
