@@ -1,16 +1,9 @@
-# nubank_clone
+# Nubank Clone
 
-A new Flutter application.
+I have made this NuBank App Clone just to study flutter.
 
-## Getting Started
+Thanks to [Renato Mota](https://www.youtube.com/watch?v=CPCjK5yy_9c) and his youtube videos. 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ [screenshot1.png]: https://github.com/brunnohofmann/flutter_nubank_clone/blob/master/pictures/screenshot1.png "Home ScreenShot"
+ [screenshot2.png]: https://github.com/brunnohofmann/flutter_nubank_clone/blob/master/pictures/screenshot2.png "Menu ScreenShot"
